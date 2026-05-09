@@ -1,0 +1,56 @@
+import type { PlanQuota, DailyUsage, UsageLogEntry } from "../types";
+
+export const MOCK_PLAN_QUOTA: PlanQuota = {
+  plan:      "Pro Plan",
+  used:      8_240,
+  total:     10_000,
+  resetDate: "Jun 1, 2026",
+};
+
+export const MOCK_DAILY_USAGE: DailyUsage[] = [
+  { date: "Apr 10", single:  80, bulk:  320 },
+  { date: "Apr 11", single: 140, bulk:  500 },
+  { date: "Apr 12", single:  60, bulk:  200 },
+  { date: "Apr 13", single: 200, bulk:  800 },
+  { date: "Apr 14", single: 120, bulk:  430 },
+  { date: "Apr 15", single:  90, bulk:  360 },
+  { date: "Apr 16", single: 175, bulk:  620 },
+  { date: "Apr 17", single: 210, bulk:  900 },
+  { date: "Apr 18", single: 155, bulk:  540 },
+  { date: "Apr 19", single:  70, bulk:  280 },
+  { date: "Apr 20", single: 190, bulk:  710 },
+  { date: "Apr 21", single: 230, bulk: 1_020 },
+  { date: "Apr 22", single: 160, bulk:  590 },
+  { date: "Apr 23", single: 100, bulk:  400 },
+  { date: "Apr 24", single: 250, bulk: 1_100 },
+  { date: "Apr 25", single: 180, bulk:  670 },
+  { date: "Apr 26", single: 130, bulk:  480 },
+  { date: "Apr 27", single: 220, bulk:  950 },
+  { date: "Apr 28", single: 170, bulk:  620 },
+  { date: "Apr 29", single:  95, bulk:  310 },
+  { date: "Apr 30", single: 260, bulk: 1_200 },
+  { date: "May 1",  single: 145, bulk:  530 },
+  { date: "May 2",  single: 185, bulk:  740 },
+  { date: "May 3",  single: 210, bulk:  880 },
+  { date: "May 4",  single:  75, bulk:  260 },
+  { date: "May 5",  single: 195, bulk:  800 },
+  { date: "May 6",  single: 240, bulk: 1_050 },
+  { date: "May 7",  single: 165, bulk:  610 },
+  { date: "May 8",  single: 200, bulk:  840 },
+  { date: "May 9",  single: 110, bulk:  420 },
+];
+
+export const MOCK_USAGE_LOG: UsageLogEntry[] = [
+  { id:  "1", type: "single", label: "name@company.com",          credits:     1, occurredAt: "May 9, 2026, 10:24 AM" },
+  { id:  "2", type: "bulk",   label: "Spring Outreach List.csv",  credits: 9_126, occurredAt: "May 9, 2026, 10:20 AM" },
+  { id:  "3", type: "single", label: "hello@startup.io",          credits:     1, occurredAt: "May 9, 2026, 10:18 AM" },
+  { id:  "4", type: "single", label: "team@business.co",          credits:     1, occurredAt: "May 9, 2026, 10:15 AM" },
+  { id:  "5", type: "bulk",   label: "CMO Leads May.csv",         credits: 5_000, occurredAt: "May 8, 2026, 2:38 PM"  },
+  { id:  "6", type: "single", label: "info@tempmail.com",         credits:     1, occurredAt: "May 8, 2026, 2:12 PM"  },
+  { id:  "7", type: "bulk",   label: "Newsletter Signups.csv",    credits: 2_480, occurredAt: "May 7, 2026, 9:22 AM"  },
+  { id:  "8", type: "single", label: "support@agency.net",        credits:     1, occurredAt: "May 7, 2026, 9:18 AM"  },
+  { id:  "9", type: "single", label: "noreply@spamsite.org",      credits:     1, occurredAt: "May 7, 2026, 9:05 AM"  },
+  { id: "10", type: "bulk",   label: "Webinar Registrations.txt", credits: 3_210, occurredAt: "May 6, 2026, 4:50 PM"  },
+  { id: "11", type: "single", label: "ceo@enterprise.com",        credits:     1, occurredAt: "May 6, 2026, 4:30 PM"  },
+  { id: "12", type: "single", label: "user@catchall.io",          credits:     1, occurredAt: "May 6, 2026, 4:15 PM"  },
+];
